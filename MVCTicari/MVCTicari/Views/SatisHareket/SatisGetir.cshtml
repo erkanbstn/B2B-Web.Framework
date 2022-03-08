@@ -1,0 +1,44 @@
+﻿@model MVCTicari.Models.SatisHareket
+@{
+    ViewBag.Title = "SatisGetir";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">Personel DÜZENLE</h2>
+<br />
+
+@using (Html.BeginForm("SatisGuncelle", "SatisHareket", FormMethod.Post, new { style = "margin-left:30px" }))
+{
+    @Html.LabelFor(c => c.Personel)
+    <br />
+    @Html.DropDownListFor(c => c.Personel, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Cari)
+    <br />
+    @Html.DropDownListFor(c => c.Cari, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Urun)
+    <br />
+    @Html.DropDownListFor(c => c.Urun, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Adet)
+    <br />
+    @Html.TextBoxFor(c => c.Adet, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Fiyat)
+    <br />
+    @Html.TextBoxFor(c => c.Fiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.ToplamTutar)
+    <br />
+    @Html.TextBoxFor(c => c.ToplamTutar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Tarih)
+    <br />
+    @Html.TextBoxFor(c => c.Tarih, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Satışı Güncelle</button>
+}
+

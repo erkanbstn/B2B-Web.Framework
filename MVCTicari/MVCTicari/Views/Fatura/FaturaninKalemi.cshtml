@@ -1,0 +1,56 @@
+﻿@using MVCTicari.Models
+@model List<FaturaKalem>
+@{
+    ViewBag.Title = "FaturaninKalemi";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">FATURA KALEM DETAYLARI</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            AÇIKLAMA
+        </th>
+        <th>
+            MİKTAR
+        </th>
+        <th>
+            BİRİM FİYAT
+        </th>
+        <th>
+            TUTAR
+        </th>
+        <th>
+            FATURA
+        </th>
+    </tr>
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.FaturaKalemID
+    </td>
+    <td>
+        @ktg.Aciklama
+    </td>
+    <td>
+        @ktg.Miktar
+    </td>
+    <td>
+        @ktg.BirimFiyat
+    </td>
+    <td>
+        @ktg.Tutar
+    </td>
+    <td>
+        @ktg.Fatura.FaturaSiraNo
+    </td>
+</tr>
+    }
+</table>

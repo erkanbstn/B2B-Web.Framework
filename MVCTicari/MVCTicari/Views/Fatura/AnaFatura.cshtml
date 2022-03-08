@@ -1,0 +1,61 @@
+﻿@using MVCTicari.Models
+@model List<Fatura>
+@{
+    ViewBag.Title = "AnaFatura";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">FATURA LİSTESİ</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            SERİ | SIRA NO
+        </th>
+        <th>
+            TARİH
+        </th>
+        <th>
+            VERGİ DAİRESİ
+        </th>
+        <th>
+            DETAY
+        </th>
+        <th>
+            DÜZENLE
+        </th>
+    </tr>
+
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.FaturaID
+    </td>
+    <td>
+        @ktg.FaturaSeriNo | @ktg.FaturaSiraNo
+    </td>
+    <td>
+        @Convert.ToDateTime(@ktg.FaturaTarih).ToString("dd/MMMM/yyyy")
+    </td>
+    <td>
+        @ktg.VergiDairesi
+    </td>
+    <td>
+        <a href="~/Fatura/FaturaDetay/@ktg.FaturaID" class="btn btn-info">DETAY</a>
+    </td>
+    <td>
+        <a href="~/Fatura/FaturaGetir/@ktg.FaturaID" class="btn btn-warning">GÜNCELLE</a>
+    </td>
+</tr>
+
+    }
+
+</table>
+<a href="~/Fatura/YeniFatura" style="margin-left:30px" class="btn btn-success">Yeni Fatura Ekle</a>
+

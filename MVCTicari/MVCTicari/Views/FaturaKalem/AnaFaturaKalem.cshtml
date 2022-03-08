@@ -1,0 +1,71 @@
+﻿@using MVCTicari.Models
+@model List<FaturaKalem>
+@{
+    ViewBag.Title = "AnaFaturaKalem";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">FATURA KALEMLERİ </h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            AÇIKLAMA
+        </th>
+        <th>
+            MİKTAR
+        </th>
+        <th>
+            BİRİM FİYAT
+        </th>
+        <th>
+            TUTAR
+        </th>
+        <th>
+            FATURA
+        </th>
+        <th>
+            SİL
+        </th>
+        <th>
+            GÜNCELLE
+        </th>
+    </tr>
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.FaturaKalemID
+    </td>
+    <td>
+        @ktg.Aciklama
+    </td>
+    <td>
+        @ktg.Miktar
+    </td>
+    <td>
+        @ktg.BirimFiyat
+    </td>
+    <td>
+        @ktg.Tutar
+    </td>
+    <td>
+        @ktg.Fatura1.FaturaSiraNo
+    </td>
+    <td>
+        <a href="~/FaturaKalem/FaturaKalemSil/@ktg.FaturaKalemID" class="btn btn-info">SİL</a>
+    </td>
+    <td>
+        <a href="~/FaturaKalem/FaturaKalemGetir/@ktg.FaturaKalemID" class="btn btn-warning">GÜNCELLE</a>
+    </td>
+</tr>
+    }
+</table>
+<a href="~/FaturaKalem/YeniFaturaKalem" style="margin-left:30px" class="btn btn-success">Yeni Fatura Kalemi Ekle</a>
+
+

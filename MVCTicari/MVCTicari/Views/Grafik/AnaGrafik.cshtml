@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AnaGrafik";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<h2>AnaGrafik</h2>
+@{
+    var grf = new Chart(width: 500, height: 500);
+    grf.AddTitle(text: "Kategoriler ve Ürün Sayıları");
+
+    grf.AddLegend(title: "Değerler");
+    grf.AddSeries(name: "Veriler",chartType: "Doughnut",
+        xValue: new[] { "Beyaz Eşya", "Televizyon", "Bilgisayar", "Küçük Ev Aletleri" },
+        yValues: new[] { 50, 20, 40, 70 });
+    grf.Write();
+}

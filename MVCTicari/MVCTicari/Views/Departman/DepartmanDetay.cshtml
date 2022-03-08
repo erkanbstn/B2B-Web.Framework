@@ -1,0 +1,47 @@
+﻿@using MVCTicari.Models
+@model List<Personel>
+@{
+    ViewBag.Title = "AnaDepartman";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">Departman Adı :  @ViewBag.dgr3</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            AD
+        </th>
+        <th>
+            SOYAD
+        </th>
+        <th>
+            SATIŞLAR
+        </th>
+    </tr>
+
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.PersonelID
+    </td>
+    <td>
+        @ktg.PersonelAd
+    </td>
+    <td>
+        @ktg.PersonelSoyad
+    </td>
+    <td>
+        <a href="~/SatisHareket/SatisDetay/@ktg.PersonelID" class="btn btn-info">SATIŞLAR</a>
+    </td>
+</tr>
+
+    }
+
+</table>

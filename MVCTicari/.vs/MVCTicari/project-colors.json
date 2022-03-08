@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "09dce397-2ec2-4724-a8c1-1af659f7e261": {
+      "ProjectGuid": "09dce397-2ec2-4724-a8c1-1af659f7e261",
+      "DisplayName": "MVCTicari",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

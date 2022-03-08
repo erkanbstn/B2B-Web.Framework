@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVCTicari.Models.Degerler>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Marka</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Marka</th>
+                    <th>Süreç</th>
+                    <th style="width: 40px">Adet</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int sirano = 0;}
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@{sirano++;}@sirano</td>
+                        <td>@item.Marka</td>
+                        <td>
+                            @if (item.Sayi3 == 1)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                </div>
+                            }
+                            @if (item.Sayi3 == 2)
+                            {
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar bg-warning" style="width: 55%"></div>
+                                </div>
+                            }
+                        </td>
+                        <td><span class="badge bg-danger">@item.Sayi3</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCTicariModelStoreContainer" CdmEntityContainer="MVCTicariEntities">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="MVCTicariModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cari">
+      <EntityTypeMapping TypeName="MVCTicariModel.Cari">
+        <MappingFragment StoreEntitySet="Cari">
+          <ScalarProperty Name="CariSifre" ColumnName="CariSifre" />
+          <ScalarProperty Name="CariID" ColumnName="CariID" />
+          <ScalarProperty Name="CariAd" ColumnName="CariAd" />
+          <ScalarProperty Name="CariSoyad" ColumnName="CariSoyad" />
+          <ScalarProperty Name="CariSehir" ColumnName="CariSehir" />
+          <ScalarProperty Name="CariMail" ColumnName="CariMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departman">
+      <EntityTypeMapping TypeName="MVCTicariModel.Departman">
+        <MappingFragment StoreEntitySet="Departman">
+          <ScalarProperty Name="DepartmanID" ColumnName="DepartmanID" />
+          <ScalarProperty Name="DepartmanAd" ColumnName="DepartmanAd" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fatura">
+      <EntityTypeMapping TypeName="MVCTicariModel.Fatura">
+        <MappingFragment StoreEntitySet="Fatura">
+          <ScalarProperty Name="FaturaID" ColumnName="FaturaID" />
+          <ScalarProperty Name="FaturaSeriNo" ColumnName="FaturaSeriNo" />
+          <ScalarProperty Name="FaturaSiraNo" ColumnName="FaturaSiraNo" />
+          <ScalarProperty Name="FaturaTarih" ColumnName="FaturaTarih" />
+          <ScalarProperty Name="VergiDairesi" ColumnName="VergiDairesi" />
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+          <ScalarProperty Name="TeslimEden" ColumnName="TeslimEden" />
+          <ScalarProperty Name="TeslimAlan" ColumnName="TeslimAlan" />
+          <ScalarProperty Name="Toplam" ColumnName="Toplam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gider">
+      <EntityTypeMapping TypeName="MVCTicariModel.Gider">
+        <MappingFragment StoreEntitySet="Gider">
+          <ScalarProperty Name="GiderID" ColumnName="GiderID" />
+          <ScalarProperty Name="GiderAciklama" ColumnName="GiderAciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="MVCTicariModel.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="KategoriAd" ColumnName="KategoriAd" />
+          <ScalarProperty Name="KategoriDurum" ColumnName="KategoriDurum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personel">
+      <EntityTypeMapping TypeName="MVCTicariModel.Personel">
+        <MappingFragment StoreEntitySet="Personel">
+          <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+          <ScalarProperty Name="PersonelAd" ColumnName="PersonelAd" />
+          <ScalarProperty Name="PersonelSoyad" ColumnName="PersonelSoyad" />
+          <ScalarProperty Name="PersonelGorsel" ColumnName="PersonelGorsel" />
+          <ScalarProperty Name="Departman" ColumnName="Departman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SatisHareket">
+      <EntityTypeMapping TypeName="MVCTicariModel.SatisHareket">
+        <MappingFragment StoreEntitySet="SatisHareket">
+          <ScalarProperty Name="SatisID" ColumnName="SatisID" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Adet" ColumnName="Adet" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="ToplamTutar" ColumnName="ToplamTutar" />
+          <ScalarProperty Name="Cari" ColumnName="Cari" />
+          <ScalarProperty Name="Personel" ColumnName="Personel" />
+          <ScalarProperty Name="Urun" ColumnName="Urun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urun">
+      <EntityTypeMapping TypeName="MVCTicariModel.Urun">
+        <MappingFragment StoreEntitySet="Urun">
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+          <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
+          <ScalarProperty Name="Marka" ColumnName="Marka" />
+          <ScalarProperty Name="Stok" ColumnName="Stok" />
+          <ScalarProperty Name="AlisFiyat" ColumnName="AlisFiyat" />
+          <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
+          <ScalarProperty Name="UrunGorsel" ColumnName="UrunGorsel" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FaturaKalem">
+      <EntityTypeMapping TypeName="MVCTicariModel.FaturaKalem">
+        <MappingFragment StoreEntitySet="FaturaKalem">
+          <ScalarProperty Name="Fatura" ColumnName="Fatura" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="BirimFiyat" ColumnName="BirimFiyat" />
+          <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="FaturaKalemID" ColumnName="FaturaKalemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UrunDetay">
+      <EntityTypeMapping TypeName="MVCTicariModel.UrunDetay">
+        <MappingFragment StoreEntitySet="UrunDetay">
+          <ScalarProperty Name="UrunBilgi" ColumnName="UrunBilgi" />
+          <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
+          <ScalarProperty Name="DetayID" ColumnName="DetayID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yapilacak">
+      <EntityTypeMapping TypeName="MVCTicariModel.Yapilacak">
+        <MappingFragment StoreEntitySet="Yapilacak">
+          <ScalarProperty Name="Personel" ColumnName="Personel" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KargoTakip">
+      <EntityTypeMapping TypeName="MVCTicariModel.KargoTakip">
+        <MappingFragment StoreEntitySet="KargoTakip">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="TakipKodu" ColumnName="TakipKodu" />
+          <ScalarProperty Name="KargoTakipID" ColumnName="KargoTakipID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KargoDetay">
+      <EntityTypeMapping TypeName="MVCTicariModel.KargoDetay">
+        <MappingFragment StoreEntitySet="KargoDetay">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Alici" ColumnName="Alici" />
+          <ScalarProperty Name="Personel" ColumnName="Personel" />
+          <ScalarProperty Name="TakipKodu" ColumnName="TakipKodu" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="KargoDetayID" ColumnName="KargoDetayID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mesaj">
+      <EntityTypeMapping TypeName="MVCTicariModel.Mesaj">
+        <MappingFragment StoreEntitySet="Mesaj">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Mesaj1" ColumnName="Mesaj" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Alici" ColumnName="Alici" />
+          <ScalarProperty Name="Gonderici" ColumnName="Gonderici" />
+          <ScalarProperty Name="MesajID" ColumnName="MesajID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

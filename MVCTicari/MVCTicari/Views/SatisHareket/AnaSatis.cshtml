@@ -1,0 +1,101 @@
+﻿@using MVCTicari.Models
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "AnaSatis";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">SATIŞ LİSTESİ</h2>
+<br />
+<table id="tbl1" class="table table-hover" style="margin-left:30px">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                TARİH
+            </th>
+            <th>
+                PERSONEL
+            </th>
+            <th>
+                CARİ
+            </th>
+            <th>
+                URUN
+            </th>
+            <th>
+                ADET
+            </th>
+            <th>
+                FİYAT
+            </th>
+            <th>
+                TOPLAM TUTAR
+            </th>
+            <th>
+                SİL
+            </th>
+            <th>
+                DÜZENLE
+            </th>
+
+        </tr>
+    </thead>
+
+    @foreach (var ktg in Model)
+    {
+        <tr>
+            <td>
+                @ktg.SatisID
+            </td>
+            <td>
+                @Convert.ToDateTime(ktg.Tarih).ToString("dd/MMMM/yyyy")
+            </td>
+            <td>
+                @ktg.Personel1.PersonelAd @ktg.Personel1.PersonelSoyad
+            </td>
+            <td>
+                @ktg.Cari1.CariAd @ktg.Cari1.CariSoyad
+            </td>
+            <td>
+                @ktg.Urun1.UrunAd
+            </td>
+            <td>
+                @ktg.Adet
+            </td>
+            <td>
+                @ktg.Fiyat
+            </td>
+            <td>
+                @ktg.ToplamTutar
+            </td>
+            <td>
+                <a href="~/SatisHareket/SatisSil/@ktg.SatisID" class="btn btn-info">SİL</a>
+            </td>
+            <td>
+                <a href="~/SatisHareket/SatisGetir/@ktg.SatisID" class="btn btn-danger">DÜZENLE</a>
+            </td>
+        </tr>
+    }
+
+</table>
+<a href="~/SatisHareket/YeniSatis" style="margin-left:30px" class="btn btn-success">Yeni Satış Ekle</a>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+    $('#tbl1').dataTable({
+        "language": {
+
+            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Turkish.json"
+
+        }
+    });
+</script>

@@ -1,0 +1,50 @@
+﻿@using MVCTicari.Models
+@model List<Fatura>
+@{
+    ViewBag.Title = "FaturaDetay";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">FATURA DETAYLARI - Sıra No :@ViewBag.dgr</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            SAAT
+        </th>
+        <th>
+            TESLİM EDEN
+        </th>
+        <th>
+            TESLİM ALAN
+        </th>
+        <th>
+            TOPLAM
+        </th>
+        <th>
+            KALEMLER
+        </th>
+    </tr>
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.Saat
+    </td>
+    <td>
+        @ktg.TeslimEden
+    </td>
+    <td>
+        @ktg.TeslimAlan
+    </td>
+    <td>
+        @ktg.Toplam
+    </td>
+    <td>
+        <a href="~/Fatura/FaturaninKalemi/@ktg.FaturaID" class="btn btn-warning">FATURA KALEM</a>
+    </td>
+</tr>
+    }
+</table>

@@ -1,0 +1,56 @@
+﻿@using MVCTicari.Models
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "CariSiparis";
+    Layout = "~/Views/Shared/CariPanel.cshtml";
+}
+<style>
+    .trt{
+        color:darkorange;
+    }
+    .trt1 {
+        color: limegreen;
+    }
+</style>
+<h2>Sipariş Geçmişim</h2>
+<br />
+<table class="table table-bordered">
+    <tr class="trt">
+        <th>
+            ID
+        </th>
+        <th>
+            Ürün
+        </th>
+        <th>
+            Personel
+        </th>
+        <th>
+            Fiyat
+        </th>
+        <th>
+            Tarih
+        </th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr class="trt1">
+            <td>
+                @i.SatisID
+            </td>
+            <td>
+                @i.Urun1.UrunAd
+            </td>
+            <td>
+                @i.Personel1.PersonelAd @i.Personel1.PersonelSoyad
+            </td>
+            <td>
+                @i.Fiyat
+            </td>
+            <td>
+                @Convert.ToDateTime(i.Tarih).ToString("dd/MMMMMM/yyyy")
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,32 @@
+﻿@model MVCTicari.Models.KargoDetay
+
+@{
+    ViewBag.Title = "Yenikargo";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">YENİ KARGO</h2>
+<br />
+
+<form style="margin-left:30px" method="post">
+    <br />
+
+    @Html.LabelFor(b => b.TakipKodu)
+    <br />
+    <input name="TakipKodu" class="form-control" readonly   value="@ViewBag.tkp"/>
+    <br />
+    @Html.LabelFor(c => c.Alici)
+    <br />
+    @Html.TextBoxFor(c => c.Alici, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Personel)
+    <br />
+    @Html.TextBoxFor(c => c.Personel, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Aciklama)
+    <br />
+    @Html.TextAreaFor(c => c.Aciklama, 6, 30, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-info">Yeni Kargo Ekle</button>
+</form>

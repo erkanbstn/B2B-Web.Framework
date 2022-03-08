@@ -1,0 +1,25 @@
+﻿@model MVCTicari.Models.Kategori
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">KATEGORİ DÜZENLE</h2>
+<br />
+
+@using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post, new { style = "margin-left:30px" }))
+{
+
+    @Html.LabelFor(c => c.KategoriID)
+    <br />
+    @Html.TextBoxFor(c => c.KategoriID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.KategoriAd)
+    <br />
+    @Html.TextBoxFor(c => c.KategoriAd, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Kategoriyi Güncelle</button>
+}
+

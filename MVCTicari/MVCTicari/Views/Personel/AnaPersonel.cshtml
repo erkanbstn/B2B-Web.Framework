@@ -1,0 +1,67 @@
+﻿@using MVCTicari.Models
+@model List<Personel>
+@{
+    ViewBag.Title = "AnaPersonel";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">PERSONEL LİSTESİ</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            AD
+        </th>
+        <th>
+            SOYAD
+        </th>
+        <th>
+            FOTOĞRAF
+        </th>
+        <th>
+            DEPARTMAN
+        </th>
+        <th>
+            SATIŞLAR
+        </th>
+        <th>
+            DÜZENLE
+        </th>
+    </tr>
+
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.PersonelID
+    </td>
+    <td>
+        @ktg.PersonelAd
+    </td>
+    <td>
+        @ktg.PersonelSoyad
+    </td>
+    <th>
+        <img src="~/AdminLTE-3.0.4/dist/img/@ktg.PersonelGorsel" />
+    </th>
+    <td>
+        @*@ktg.Departman1.DepartmanAd*@
+    </td>
+    <td>
+        <a href="~/Personel/PersonelDetay/@ktg.PersonelID" class="btn btn-info">DETAY</a>
+    </td>
+    <td>
+        <a href="~/Personel/PersonelGetir/@ktg.PersonelID" class="btn btn-warning">GÜNCELLE</a>
+    </td>
+</tr>
+
+    }
+
+</table>
+<a href="~/Personel/YeniPersonel" style="margin-left:30px" class="btn btn-success">Yeni Personel Ekle</a>
+

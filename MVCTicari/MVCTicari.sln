@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCTicari", "MVCTicari\MVCTicari.csproj", "{09DCE397-2EC2-4724-A8C1-1AF659F7E261}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09DCE397-2EC2-4724-A8C1-1AF659F7E261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DCE397-2EC2-4724-A8C1-1AF659F7E261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DCE397-2EC2-4724-A8C1-1AF659F7E261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DCE397-2EC2-4724-A8C1-1AF659F7E261}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D223E47-DC69-4199-A222-954B7FF876BF}
+	EndGlobalSection
+EndGlobal

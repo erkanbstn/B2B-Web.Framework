@@ -1,0 +1,59 @@
+﻿@using MVCTicari.Models
+@model PagedList.IPagedList<Kategori>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "AnaKategori";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">KATEGORİ LİSTESİ</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            KATEGORİ
+        </th>
+        <th>
+            SİL
+        </th>
+        <th>
+            DÜZENLE
+        </th>
+    </tr>
+
+
+    @foreach (var ktg in Model)
+    {
+        <tr>
+            <td>
+                @ktg.KategoriID
+            </td>
+            <td>
+                @ktg.KategoriAd
+            </td>
+            <td>
+                <a href="~/Kategori/KategoriSil/@ktg.KategoriID" class="btn btn-danger">SİL</a>
+            </td>
+            <td>
+                <a href="~/Kategori/KategoriGetir/@ktg.KategoriID" class="btn btn-warning">GÜNCELLE</a>
+            </td>
+        </tr>
+
+    }
+
+</table>
+<div style="margin-left:25px">
+    @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("AnaKategori", new { sayfa }), new PagedListRenderOptions
+{
+LiElementClasses = new List<string>
+{
+    "page-link"
+}
+})
+</div>
+<a href="~/Kategori/YeniKategori" style="margin-left:30px" class="btn btn-success">Yeni Kategori Ekle</a>

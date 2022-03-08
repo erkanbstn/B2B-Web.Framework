@@ -1,0 +1,33 @@
+﻿@model MVCTicari.Models.Cari
+@{
+    ViewBag.Title = "YeniCari";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">YENİ CARİ</h2>
+<br />
+
+<form style="margin-left:30px" method="post">
+    <br />
+    @Html.HiddenFor(c => c.CariID)
+    @Html.LabelFor(c => c.CariAd)
+    <br />
+    @Html.TextBoxFor(c => c.CariAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.CariSoyad)
+    <br />
+    @Html.TextBoxFor(c => c.CariSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.CariSehir)
+    <br />
+    @Html.TextBoxFor(c => c.CariSehir, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.CariMail)
+    <br />
+    @Html.TextBoxFor(c => c.CariMail, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Yeni Cari Ekle</button>
+</form>
+

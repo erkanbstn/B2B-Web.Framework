@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8fc75592bce41ab8f66ab7ae5c423c7" Name="Diagram1">
+        <EntityTypeShape EntityType="MVCTicariModel.Admin" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Cari" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Departman" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Fatura" Width="1.5" PointX="5.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Gider" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Kategori" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Personel" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.SatisHareket" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVCTicariModel.Urun" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="MVCTicariModel.FK_dbo_SatisHarekets_dbo_Caris_Cari_CariID" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTicariModel.FK_dbo_Personels_dbo_Departmen_Departman_DepartmanID" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTicariModel.FK_dbo_Uruns_dbo_Kategoris_KategoriID" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTicariModel.FK_dbo_SatisHarekets_dbo_Personels_Personel_PersonelID" ManuallyRouted="false" />
+        <AssociationConnector Association="MVCTicariModel.FK_dbo_SatisHarekets_dbo_Uruns_Urun_UrunID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MVCTicariModel.FaturaKalem" Width="1.5" PointX="8" PointY="6.25" />
+        <AssociationConnector Association="MVCTicariModel.FK_dbo_FaturaKalems_dbo_Faturas_Fatura_FaturaID" />
+        <EntityTypeShape EntityType="MVCTicariModel.UrunDetay" Width="1.5" PointX="8.375" PointY="3.75" />
+        <EntityTypeShape EntityType="MVCTicariModel.Yapilacak" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="MVCTicariModel.KargoTakip" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="MVCTicariModel.KargoDetay" Width="1.5" PointX="10.375" PointY="3.75" />
+        <AssociationConnector Association="MVCTicariModel.FK_Yapilacak_Personel" />
+        <EntityTypeShape EntityType="MVCTicariModel.Mesaj" Width="1.5" PointX="10.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

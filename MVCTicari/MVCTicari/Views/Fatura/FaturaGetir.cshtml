@@ -1,0 +1,52 @@
+﻿@model MVCTicari.Models.Fatura
+@{
+    ViewBag.Title = "FaturaGetir";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">FATURA DÜZENLE</h2>
+<br />
+
+@using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post, new { style = "margin-left:30px" }))
+{
+    @Html.LabelFor(c => c.FaturaID)
+    <br />
+    @Html.TextBoxFor(c => c.FaturaID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.FaturaSeriNo)
+    <br />
+    @Html.TextBoxFor(c => c.FaturaSeriNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.FaturaSiraNo)
+    <br />
+    @Html.TextBoxFor(c => c.FaturaSiraNo, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.FaturaTarih)
+    <br />
+    @Html.TextBoxFor(c => c.FaturaTarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.VergiDairesi)
+    <br />
+    @Html.TextBoxFor(c => c.VergiDairesi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Saat)
+    <br />
+    @Html.TextBoxFor(c => c.Saat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.TeslimEden)
+    <br />
+    @Html.TextBoxFor(c => c.TeslimEden, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.TeslimAlan)
+    <br />
+    @Html.TextBoxFor(c => c.TeslimAlan, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Toplam)
+    <br />
+    @Html.TextBoxFor(c => c.Toplam, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Faturai Güncelle</button>
+}
+

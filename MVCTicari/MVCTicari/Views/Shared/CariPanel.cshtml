@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>.Net Cari Panel</title>
+    <link rel="icon" type="image/x-icon" href="~/Web/dist/favicon.ico" />
+    <link href="~/SideBar/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/SideBar/css/simple-sidebar.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"> <u>Hoşgeldiniz Cari  </u> </div>
+            <div class="list-group list-group-flush">
+                <a href="~/CariPanel/AnaCariPanel" class="list-group-item list-group-item-action bg-light">Profilim</a>
+                <a href="~/CariPanel/CariSiparis" class="list-group-item list-group-item-action bg-light">Siparişlerim</a>
+                <a href="~/CariPanel/CariKargo" class="list-group-item list-group-item-action bg-light">Kargo Takibi</a>
+                <a href="~/CariPanel/CariMesaj" class="list-group-item list-group-item-action bg-light">Mesajlar</a>
+                <a href="~/CariPanel/CariCikis" class="list-group-item list-group-item-action bg-light">Çıkış Yap</a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <br />
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/SideBar/vendor/jquery/jquery.min.js"></script>
+    <script src="~/SideBar/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });</script>
+</body>
+</html>
+

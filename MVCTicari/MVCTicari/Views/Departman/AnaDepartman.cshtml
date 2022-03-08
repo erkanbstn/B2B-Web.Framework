@@ -1,0 +1,54 @@
+﻿@using MVCTicari.Models
+@model List<Departman>
+@{
+    ViewBag.Title = "AnaDepartman";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">DEPARTMAN LİSTESİ</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            KATEGORİ
+        </th>
+        <th>
+            DETAY
+        </th>
+        <th>
+            SİL
+        </th>
+        <th>
+            DÜZENLE
+        </th>
+    </tr>
+
+
+    @foreach (var ktg in Model)
+    {
+<tr>
+    <td>
+        @ktg.DepartmanID
+    </td>
+    <td>
+        @ktg.DepartmanAd
+    </td>
+    <td>
+        <a href="~/Departman/DepartmanDetay/@ktg.DepartmanID" class="btn btn-info">DETAY</a>
+    </td>
+    <td>
+        <a href="~/Departman/DepartmanSil/@ktg.DepartmanID" class="btn btn-danger">SİL</a>
+    </td>
+    <td>
+        <a href="~/Departman/DepartmanGetir/@ktg.DepartmanID" class="btn btn-warning">GÜNCELLE</a>
+    </td>
+</tr>
+
+    }
+
+</table>
+<a href="~/Departman/YeniDepartman" style="margin-left:30px" class="btn btn-success">Yeni Departman Ekle</a>

@@ -1,0 +1,36 @@
+﻿@model MVCTicari.Models.FaturaKalem
+@{
+    ViewBag.Title = "FaturaKalemGetir";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">FATURA KALEMİ DÜZENLE</h2>
+<br />
+
+@using (Html.BeginForm("FaturaKalemGuncelle", "FaturaKalem", FormMethod.Post, new { style = "margin-left:30px" }))
+{
+    @Html.LabelFor(c => c.Aciklama)
+    <br />
+    @Html.TextBoxFor(c => c.Aciklama, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Miktar)
+    <br />
+    @Html.TextBoxFor(c => c.Miktar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.BirimFiyat)
+    <br />
+    @Html.TextBoxFor(c => c.BirimFiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Tutar)
+    <br />
+    @Html.TextBoxFor(c => c.Tutar, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Fatura)
+    <br />
+    @Html.DropDownListFor(c => c.Fatura, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Fatura Kalemi Güncelle</button>
+}
+

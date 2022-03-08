@@ -1,0 +1,28 @@
+﻿@model MVCTicari.Models.Personel
+@{
+    ViewBag.Title = "YeniPersonel";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">YENİ KATEGORİ</h2>
+<br />
+<form style="margin-left:30px" method="post" enctype="multipart/form-data">
+    <br />
+    @Html.LabelFor(c => c.PersonelAd)
+    <br />
+    @Html.TextBoxFor(c => c.PersonelAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.PersonelSoyad)
+    <br />
+    @Html.TextBoxFor(c => c.PersonelSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Departman)
+    <br />
+    @Html.DropDownListFor(c => c.Departman, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    <br />
+    <input type="file" name="PersonelGorsel" class="form-group" />
+    <br />
+    <button type="submit" class="btn btn-info">Yeni Personel Ekle</button>
+</form>
+

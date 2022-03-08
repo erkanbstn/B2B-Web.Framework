@@ -1,0 +1,44 @@
+﻿@model MVCTicari.Models.Urun
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">ÜRÜN DÜZENLE</h2>
+<br />
+
+@using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post, new { style = "margin-left:30px" }))
+{
+    @Html.LabelFor(c => c.UrunID)
+    <br />
+    @Html.TextBoxFor(c => c.UrunID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.UrunAd)
+    <br />
+    @Html.TextBoxFor(c => c.UrunAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Marka)
+    <br />
+    <br />
+    @Html.TextBoxFor(c => c.Marka, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Stok)
+    <br />
+    @Html.TextBoxFor(c => c.Stok, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.AlisFiyat)
+    <br />
+    @Html.TextBoxFor(c => c.AlisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.SatisFiyat)
+    <br />
+    @Html.TextBoxFor(c => c.SatisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.Kategori)
+    <br />
+    @Html.DropDownListFor(c => c.Kategori, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-info">Ürünü Güncelle</button>
+}
+

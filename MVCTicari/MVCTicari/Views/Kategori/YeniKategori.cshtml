@@ -1,0 +1,27 @@
+﻿@model MVCTicari.Models.Kategori
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+@*<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>*@
+<script src="~/Scripts/Swa.js"></script>
+<br />
+<h2 style="margin-left:30px">YENİ KATEGORİ</h2>
+<br />
+
+<form style="margin-left:30px" method="post">
+    <br />
+    @Html.LabelFor(c => c.KategoriAd)
+    <br />
+    <br />
+    @Html.TextBoxFor(c => c.KategoriAd, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" id="Btn1" class="btn btn-info">Yeni Kategori Ekle</button>
+    <script>
+        $('#Btn1').click(function () {
+            swal("İşlem Başarılı!", "Kategori Eklendi.", "success")
+        });
+    </script>
+</form>

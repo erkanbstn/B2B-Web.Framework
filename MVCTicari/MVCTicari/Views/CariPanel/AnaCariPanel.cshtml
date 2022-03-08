@@ -1,0 +1,42 @@
+﻿@model MVCTicari.Models.Cari
+
+@{
+    ViewBag.Title = "AnaCariPanel";
+    Layout = "~/Views/Shared/CariPanel.cshtml";
+}
+
+@Html.Action("ProfilPartial", "CariPanel")
+@using (Html.BeginForm("AnaCariPanel", "CariPanel", FormMethod.Post))
+{
+    <table class="table table-bordered">
+        <tr>
+            <td><label class="lbl">Mail Adresi : <label class="lbl1">@Html.DisplayFor(b => b.CariMail)</label></label></td>
+        </tr>
+        <tr>
+            <td>
+                <label class="lbl">Cari Ad</label>
+                @Html.TextBoxFor(b => b.CariAd, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="lbl">Cari Soyad</label>
+                @Html.TextBoxFor(b => b.CariSoyad, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="lbl">Cari Şehir</label>
+                @Html.TextBoxFor(b => b.CariSehir, new { @class = "form-control" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="lbl">Cari Şifre</label>
+                @Html.TextBoxFor(b => b.CariSifre, new { @class = "form-control" })
+            </td>
+        </tr>
+    </table>
+    <button style="margin-left:15px;" class="btn btn-success" type="submit">Bilgilerimi Kaydet</button>
+}
+@Html.Action("ProfilPartial2", "CariPanel")

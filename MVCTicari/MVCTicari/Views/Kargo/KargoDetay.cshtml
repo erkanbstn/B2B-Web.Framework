@@ -1,0 +1,35 @@
+﻿@using MVCTicari.Models
+@model List<KargoTakip>
+@{
+    ViewBag.Title = "KargoDetay";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">KARGO DETAY </h2>
+<br />
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            AÇIKLAMA
+        </th>
+        <th>
+            TARİH
+        </th>
+    </tr>
+    @foreach (var ktg in Model)
+    {
+        <tr>
+            <td>
+                @ktg.Aciklama
+            </td>
+            <td>
+                @Convert.ToDateTime(ktg.Tarih).ToString("dd/MMMM/yyyy")
+            </td>
+        </tr>
+
+    }
+</table>
+
+

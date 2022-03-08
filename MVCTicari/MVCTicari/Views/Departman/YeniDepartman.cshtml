@@ -1,0 +1,21 @@
+﻿@model MVCTicari.Models.Departman
+@{
+    ViewBag.Title = "YeniDepartman";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">YENİ DEPARTMAN</h2>
+<br />
+
+<form style="margin-left:30px" method="post">
+    <br />
+    @Html.HiddenFor(c=>c.DepartmanID)
+    @Html.LabelFor(c => c.DepartmanAd)
+    <br />
+    @Html.TextBoxFor(c => c.DepartmanAd, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Yeni Departman Ekle</button>
+</form>
+

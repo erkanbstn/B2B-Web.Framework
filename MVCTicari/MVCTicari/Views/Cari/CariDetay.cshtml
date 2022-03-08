@@ -1,0 +1,54 @@
+﻿@using MVCTicari.Models
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "CariDetay";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">SATIŞ DETAYLARI : @ViewBag.dgr5</h2>
+<br />
+<table class="table table-hover" style="margin-left:30px">
+    <tr>
+        <th>
+            TARİH
+        </th>
+        <th>
+            PERSONEL
+        </th>
+        <th>
+            CARİ
+        </th>
+        <th>
+            URUN
+        </th>
+        <th>
+            TOPLAM TUTAR
+        </th>
+
+    </tr>
+
+
+    @foreach (var ktg in Model)
+    {
+        <tr>
+            <td>
+                @ktg.Tarih
+            </td>
+            <td>
+                @ktg.Personel1.PersonelAd @ktg.Personel1.PersonelSoyad
+            </td>
+            <td>
+                @ktg.Cari1.CariAd @ktg.Cari1.CariSoyad
+            </td>
+            <td>
+                @ktg.Urun1.UrunAd
+            </td>
+            <td>
+                @ktg.ToplamTutar
+            </td>
+        </tr>
+
+    }
+
+</table>

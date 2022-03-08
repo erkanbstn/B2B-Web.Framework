@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "QrIslemleri", FormMethod.Post))
+    {
+        <input type="text" name="qrcode" class="form-group" />
+        <input type="submit" class="btn btn-danger" value="Kod Üret" />
+    }
+    <hr />
+    @if (ViewBag.QRCodeImage != null)
+    {
+        <img src="@ViewBag.QRCodeImage" alt="" style="height:450px;width:450px" />
+    }
+</body>
+</html>

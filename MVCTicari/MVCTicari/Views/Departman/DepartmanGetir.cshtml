@@ -1,0 +1,24 @@
+﻿@model MVCTicari.Models.Departman
+@{
+    ViewBag.Title = "DepartmanGetir";
+    Layout = "~/Views/Shared/AnaSayfa.cshtml";
+}
+
+<br />
+<h2 style="margin-left:30px">DEPARTMAN DÜZENLE</h2>
+<br />
+
+@using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post, new { style = "margin-left:30px" }))
+{
+    @Html.LabelFor(c => c.DepartmanID)
+    <br />
+    @Html.TextBoxFor(c => c.DepartmanID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(c => c.DepartmanAd)
+    <br />
+    @Html.TextBoxFor(c => c.DepartmanAd, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Departmanı Güncelle</button>
+}
+

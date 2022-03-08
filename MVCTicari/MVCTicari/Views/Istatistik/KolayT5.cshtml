@@ -1,0 +1,33 @@
+﻿@using MVCTicari.Models
+@model List<Kategori>
+
+<div class="card-body">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="width: 10px">#</th>
+                <th>Kategori Adı</th>
+                <th>Süreç</th>
+                <th style="width: 40px">Oran</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ int sirano = 0;}
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@{sirano++;}@sirano</td>
+                    <td>@item.KategoriAd</td>
+                    <td>
+                        <div class="progress progress-xs">
+                            <div class="progress-bar progress-bar-danger" style="width: 100%"></div>
+                        </div>
+                    </td>
+                    <td><span class="badge bg-success">100%</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
